@@ -1,22 +1,15 @@
 import streamlit as st
 import re
 import nltk
-import requests
-from nltk.corpus import stopwords
-from nltk.tokenize import sent_tokenize
-from sklearn.feature_extraction.text import TfidfVectorizer
+try:
+    nltk.data.find('tokenizers/punkt')
+except LookupError:
+    nltk.download('punkt')
 
-# Sumy Framework Modules
-from sumy.parsers.plaintext import PlaintextParser
-from sumy.nlp.tokenizers import Tokenizer
-from sumy.summarizers.lex_rank import LexRankSummarizer
-from sumy.summarizers.luhn import LuhnSummarizer
-
-# ─── PREMIUM DARK SAAS LAYOUT CONFIGURATIONS ───
-# ─── PREMIUM DARK SAAS LAYOUT CONFIGURATIONS ───
-import streamlit as st
-import re
-import nltk
+try:
+    nltk.data.find('tokenizers/punkt_tab')
+except LookupError:
+    nltk.download('punkt_tab')
 import requests
 from nltk.corpus import stopwords
 from nltk.tokenize import sent_tokenize
