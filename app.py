@@ -149,7 +149,7 @@ class HybridSummarizer:
         self.stop_words = set(stopwords.words('english'))
         self.API_URL = "https://api-inference.huggingface.co/models/facebook/bart-large-cnn"
         # 🔑 Active Hugging Face API access token string
-        self.token = "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" 
+        self.token = "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" 
         self.headers = {"Authorization": f"Bearer {self.token}"}
 
     def clean_text(self, text):
@@ -251,7 +251,7 @@ with center_input:
     algorithm = st.selectbox(
         "Select Active Operational Engine",
         (
-            "✨ Cloud Neural Network (Abstractive AI)", 
+            "Cloud Neural Network (Abstractive AI)", 
             "Native TF-IDF (Scikit-Learn Model)", 
             "LexRank Engine (Graph-Based)", 
             "Luhn Engine (Frequency-Based)"
